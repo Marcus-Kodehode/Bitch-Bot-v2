@@ -1,6 +1,6 @@
 {
   "name": "nextjs-project-scaffolder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "CLI tool for scaffolding professional Next.js project folder structures",
   "main": "src/index.js",
   "type": "module",
