@@ -9,7 +9,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node src/index.js"
+    "dev": "node src/index.js",
+    "build": "echo \"No build step needed for CLI tool\"",
+    "install-global": "npm install -g .",
+    "uninstall-global": "npm uninstall -g nextjs-project-scaffolder",
+    "update-global": "npm uninstall -g nextjs-project-scaffolder && npm install -g ."
   },
   "keywords": [
     "nextjs",
