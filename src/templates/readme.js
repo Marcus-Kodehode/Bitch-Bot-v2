@@ -1,3 +1,16 @@
+/**
+ * File: src/templates/readme.js
+ * Location: /src/templates/readme.js
+ * 
+ * README template generator for scaffolded Next.js projects
+ * Creates comprehensive project documentation with standard sections
+ */
+
+/**
+ * Generates a complete README.md template for new Next.js projects
+ * Includes all standard sections: features, installation, structure, scripts, etc.
+ * @returns {string} Complete README.md content as a formatted string
+ */
 export function createReadmeTemplate() {
   return `# 🚀 Next.js Project
 
@@ -96,4 +109,16 @@ This project is licensed under the MIT License.
 **"Great projects start with great structure."** 
 
 Built with ❤️ using Next.js
-`;};
+`;
+}
+
+/**
+ * Footer: src/templates/readme.js
+ * 
+ * This file provides the README template generation functionality for the scaffolder.
+ * It creates a comprehensive, professional README.md file for new Next.js projects
+ * with all the standard sections developers expect: features, installation instructions,
+ * project structure, available scripts, styling options, learning resources, and
+ * contribution guidelines. The template uses markdown formatting and includes emojis
+ * for visual appeal and better readability.
+ */
