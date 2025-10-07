@@ -38,42 +38,61 @@
 ### Prerequisites
 
 - **Node.js 16+** - [Download here](https://nodejs.org)
-- **npm** (comes with Node.js) or **yarn**
+- **npm** (comes with Node.js)
 
-### Installation
+### Installation & Usage
 
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/yourusername/nextjs-project-scaffolder.git
-cd nextjs-project-scaffolder
-```
-
-2. **Install dependencies**
+#### **Method 1: Install globally (Recommended)**
 
 ```bash
-npm install
-```
+# Install the package globally
+npm install -g nextjs-project-scaffolder
 
-3. **Run the scaffolder**
-
-```bash
-# Interactive mode
-npm run dev
-
-# Or run directly
-node src/index.js
-```
-
-4. **Global installation (optional)**
-
-```bash
-# Install globally to use anywhere
-npm install -g .
-
-# Then use from any directory
+# Use anywhere to scaffold new projects
 scaffold-next
 ```
+
+#### **Method 2: Use with npx (No installation needed)**
+
+```bash
+# Run directly without installing
+npx nextjs-project-scaffolder
+
+# Or specify a target directory
+npx nextjs-project-scaffolder ./my-new-project
+```
+
+#### **Method 3: Development/Local usage**
+
+```bash
+# Clone and run locally (for development)
+git clone https://github.com/yourusername/nextjs-project-scaffolder.git
+cd nextjs-project-scaffolder
+npm install
+npm run dev
+```
+
+### **Quick Start Example**
+
+```bash
+# Create a new Next.js project structure
+mkdir my-awesome-app
+cd my-awesome-app
+
+# Run the scaffolder
+npx nextjs-project-scaffolder
+
+# Or if installed globally
+scaffold-next
+```
+
+### **Installation Methods Explained**
+
+| Method             | Command                                    | When to Use                 | Pros                                   | Cons                             |
+| ------------------ | ------------------------------------------ | --------------------------- | -------------------------------------- | -------------------------------- |
+| **Global Install** | `npm install -g nextjs-project-scaffolder` | You use it frequently       | Fast execution, works offline          | Takes up disk space              |
+| **NPX**            | `npx nextjs-project-scaffolder`            | Occasional use              | Always latest version, no installation | Slower first run, needs internet |
+| **Local Dev**      | `npm run dev`                              | Contributing to the project | Full source access                     | Only for development             |
 
 ## Built With
 
@@ -128,15 +147,15 @@ NPM scripts are defined in `package.json` under the `"scripts"` section:
 **Running commands:**
 
 ```bash
-# Runs the script defined in package.json
-npm run dev          # Executes: node src/index.js
+# For end users (recommended methods)
+npm install -g nextjs-project-scaffolder  # Install globally
+scaffold-next                             # Use the CLI tool
 
-# Direct execution
-node src/index.js    # Runs the main entry point
+npx nextjs-project-scaffolder             # Run without installing
 
-# Global installation creates a command
-npm install -g .     # Creates 'scaffold-next' command
-scaffold-next        # Runs src/index.js globally
+# For development (in scaffolder project)
+npm run dev                               # Executes: node src/index.js
+node src/index.js                         # Direct execution
 ```
 
 ### Without `src/` Directory (Traditional)
@@ -166,29 +185,46 @@ npm test             # Runs test suite
 
 ## CLI Usage
 
-### Interactive Mode
+### **Basic Usage**
 
 ```bash
-npm run dev
+# Interactive mode - prompts for options
+npx nextjs-project-scaffolder
+
+# Or if installed globally
+scaffold-next
 ```
 
-The scaffolder will prompt you for:
-
-- Target directory path
-- Whether to include README generation
-- Preview mode option
-
-### Command Line Arguments
+### **Command Line Options**
 
 ```bash
-# Preview what will be created (no changes made)
-node src/index.js --preview /path/to/project
+# Specify target directory
+npx nextjs-project-scaffolder ./my-project
 
-# Create structure without README
-node src/index.js --no-readme /path/to/project
+# Preview mode - see what will be created without making changes
+npx nextjs-project-scaffolder --preview
+
+# Skip README generation
+npx nextjs-project-scaffolder --no-readme
 
 # Get help
-node src/index.js --help
+npx nextjs-project-scaffolder --help
+```
+
+### **Real-world Examples**
+
+```bash
+# Scaffold in current directory
+npx nextjs-project-scaffolder .
+
+# Create new project in specific folder
+npx nextjs-project-scaffolder ./my-ecommerce-app
+
+# Preview what would be created
+npx nextjs-project-scaffolder --preview ./test-project
+
+# Create structure without README
+npx nextjs-project-scaffolder --no-readme ./minimal-project
 ```
 
 ## Generated Project Structure
