@@ -2,7 +2,7 @@
 
 <p><img src="/public/assets/images/MBlogo.png" alt="Personal Logo" width="150" /></p>
 
-<p><img src="/public/images/assets/scaffold-logo.png" alt="Next.js Scaffolder Logo" width="150" /></p>
+<p><img src="/public/assets/images/scaffold-logo.png" alt="Next.js Scaffolder Logo" width="150" /></p>
 
 # Next.js Project Scaffolder
 
