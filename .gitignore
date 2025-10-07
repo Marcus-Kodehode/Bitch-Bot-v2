@@ -22,6 +22,10 @@ logs
 *.log
 scaffolder.log
 
+# Scaffolder test output (ignore generated projects during testing)
+test-output/
+testing/
+
 # Runtime data
 pids
 *.pid

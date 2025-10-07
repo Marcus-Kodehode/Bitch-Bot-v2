@@ -19,7 +19,7 @@
 ## Features
 
 - 🚀 **Professional scaffolding** - Creates well-organized Next.js project structures
-- 📁 **Intelligent folder organization** - Follows Next.js 13+ App Router best practices  
+- 📁 **Intelligent folder organization** - Follows Next.js 13+ App Router best practices
 - 🎯 **CLI interface** - Interactive command-line tool with user-friendly prompts
 - 📄 **README generation** - Automatically creates comprehensive project documentation
 - 🔍 **Preview mode** - See what will be created before making changes
@@ -29,9 +29,9 @@
 
 ## Screenshot
 
-<div align="center">
+<!-- <div align="center">
 <img src="/public/images/scaffolder-screenshot.png" alt="Next.js Scaffolder Screenshot" width="900" />
-</div>
+</div> -->
 
 ## Getting Started
 
@@ -43,17 +43,20 @@
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/yourusername/nextjs-project-scaffolder.git
 cd nextjs-project-scaffolder
 ```
 
 2. **Install dependencies**
+
 ```bash
 npm install
 ```
 
 3. **Run the scaffolder**
+
 ```bash
 # Interactive mode
 npm run dev
@@ -63,6 +66,7 @@ node src/index.js
 ```
 
 4. **Global installation (optional)**
+
 ```bash
 # Install globally to use anywhere
 npm install -g .
@@ -122,6 +126,7 @@ NPM scripts are defined in `package.json` under the `"scripts"` section:
 - **Module type**: `"type": "module"` enables ES6 imports/exports
 
 **Running commands:**
+
 ```bash
 # Runs the script defined in package.json
 npm run dev          # Executes: node src/index.js
@@ -142,6 +147,7 @@ scaffold-next        # Runs src/index.js globally
 - **Scripts**: `npm start`, `npm test`, `npm run build`
 
 **Example structure:**
+
 ```bash
 # Traditional structure
 npm start            # Usually runs: node index.js
@@ -151,25 +157,29 @@ npm test             # Runs test suite
 
 ### Key Differences
 
-| Aspect | With `src/` | Without `src/` |
-|--------|-------------|----------------|
-| **Entry Point** | `src/index.js` | `index.js` |
-| **Organization** | Source code separated | All files in root |
-| **Build Process** | May need compilation | Direct execution |
-| **Best Practice** | Modern, organized | Traditional, simple |
+| Aspect            | With `src/`           | Without `src/`      |
+| ----------------- | --------------------- | ------------------- |
+| **Entry Point**   | `src/index.js`        | `index.js`          |
+| **Organization**  | Source code separated | All files in root   |
+| **Build Process** | May need compilation  | Direct execution    |
+| **Best Practice** | Modern, organized     | Traditional, simple |
 
 ## CLI Usage
 
 ### Interactive Mode
+
 ```bash
 npm run dev
 ```
+
 The scaffolder will prompt you for:
+
 - Target directory path
 - Whether to include README generation
 - Preview mode option
 
 ### Command Line Arguments
+
 ```bash
 # Preview what will be created (no changes made)
 node src/index.js --preview /path/to/project
@@ -214,9 +224,9 @@ Edit `src/config/structure.js` to customize the generated folder structure:
 
 ```javascript
 export const folderStructure = [
-  'app/components/ui',
-  'app/components/forms',
-  'app/components/layout',
+  "app/components/ui",
+  "app/components/forms",
+  "app/components/layout",
   // Add your custom folders here
 ];
 ```
@@ -281,7 +291,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-*"Great projects start with great structure."*
+_"Great projects start with great structure."_
 
 <sub>Built with ❤️ for Next.js developers</sub>
 

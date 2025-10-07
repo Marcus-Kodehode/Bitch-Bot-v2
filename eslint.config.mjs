@@ -1,25 +1,53 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+/**
+ * File: eslint.config.mjs
+ * Location: /eslint.config.mjs
+ * 
+ * ESLint configuration for Node.js CLI application
+ * Configured for ES6+ modules and Node.js environment
+ */
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+export default [
   {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: {
+        // Node.js globals
+        console: "readonly",
+        process: "readonly",
+        Buffer: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        global: "readonly",
+        module: "readonly",
+        require: "readonly",
+        exports: "readonly"
+      }
+    },
+    rules: {
+      // Basic JavaScript rules
+      "no-unused-vars": "warn",
+      "no-console": "off", // Allow console in CLI apps
+      "prefer-const": "error",
+      "no-var": "error",
+      
+      // ES6+ rules
+      "arrow-spacing": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-template": "error",
+      
+      // Code style
+      "indent": ["error", 2],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"]
+    },
     ignores: [
       "node_modules/**",
-      ".next/**",
-      "out/**",
+      "dist/**",
       "build/**",
-      "next-env.d.ts",
-    ],
-  },
+      "coverage/**",
+      "*.log",
+      ".kiro/**"
+    ]
+  }
 ];
-
-export default eslintConfig;
